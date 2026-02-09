@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioHelper Pro - Cuidado Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="setup-container" class="card main-card">
+        <h1 class="logo">BioHelper<span>+</span></h1>
+        
+        <form id="complex-quiz">
+            <div class="step">
+                <label>Quem você é?</label>
+                <select id="user-type">
+                    <option value="jovem">Jovem / Adulto</option>
+                    <option value="idoso">Idoso</option>
+                </select>
+            </div>
+
+            <div class="step">
+                <label>Condição Neurológica/Desenvolvimento:</label>
+                <select id="neuro">
+                    <option value="nenhum">Nenhuma</option>
+                    <option value="autismo">Autismo (TEA)</option>
+                    <option value="tdah">TDAH</option>
+                    <option value="alzheimer">Alzheimer / Demência</option>
+                </select>
+            </div>
+
+            <div class="step">
+                <label>Possui alguma dessas doenças?</label>
+                <select id="doenca">
+                    <option value="nenhuma">Nenhuma</option>
+                    <option value="diabetes">Diabetes</option>
+                    <option value="hipertensao">Hipertensão (Pressão Alta)</option>
+                    <option value="ansiedade">Ansiedade Crônica</option>
+                </select>
+            </div>
+
+            <div class="step">
+                <label>Qual o nível atual da condição?</label>
+                <div class="radio-group">
+                    <input type="radio" name="nivel" value="leve" checked> Leve
+                    <input type="radio" name="nivel" value="moderado"> Moderado
+                    <input type="radio" name="nivel" value="grave"> Grave
+                </div>
+            </div>
+
+            <button type="button" onclick="gerarPlanoSaude()" class="btn-glow">GERAR MEU PLANO VIDA</button>
+        </form>
+    </div>
+
+    <main id="dashboard" class="hidden">
+        <header class="dash-header">
+            <h2 id="user-greeting">Olá, seu plano está pronto!</h2>
+            <div id="status-badge">Status: Ativo</div>
+        </header>
+
+        <section class="remedios-section">
+            <h3><center>💊 Prescrição de Auxílio</center></h3>
+            <div id="lista-remedios"></div>
+        </section>
+
+        <section class="rotina-section">
+            <h3><center>📅 Cronograma do Dia</center></h3>
+            <div id="cronograma"></div>
+        </section>
+
+        <button onclick="location.reload()" class="btn-back">Configurações</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
