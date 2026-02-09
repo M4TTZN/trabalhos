@@ -1,0 +1,90 @@
+:root {
+    --bg-dark: #0f172a;
+    --neon-blue: #00f2ff;
+    --neon-purple: #7000ff;
+    --neon-pink: #ff007a;
+    --neon-green: #39ff14;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.main-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 2px solid var(--neon-blue);
+    padding: 40px;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
+}
+
+.logo {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+}
+.logo span { color: var(--neon-pink); }
+
+.step { margin-bottom: 25px; }
+
+label { display: block; margin-bottom: 10px; font-weight: bold; color: var(--neon-blue); }
+
+select {
+    width: 100%;
+    padding: 15px;
+    background: #1e293b;
+    border: 1px solid var(--neon-purple);
+    color: white;
+    border-radius: 12px;
+    font-size: 1.1rem;
+}
+
+.btn-glow {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to right, var(--neon-purple), var(--neon-pink));
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(112, 0, 255, 0.4);
+    transition: 0.3s;
+}
+
+.btn-glow:hover { transform: scale(1.02); box-shadow: 0 0 25px var(--neon-pink); }
+
+/* Dashboard */
+.hidden { display: none; }
+#dashboard { width: 95%; max-width: 800px; }
+
+.remedios-card {
+    background: #1e293b;
+    border-left: 10px solid var(--neon-green);
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hora { font-weight: 900; color: var(--neon-blue); font-size: 1.4rem; }
+
+/* Mudanças por Gravidade */
+.grave { border: 4px solid var(--neon-pink) !important; animation: pulse 2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0px var(--neon-pink); } 50% { box-shadow: 0 0 20px var(--neon-pink); } 100% { box-shadow: 0 0 0px var(--neon-pink); } }
